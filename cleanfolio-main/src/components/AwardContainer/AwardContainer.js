@@ -2,12 +2,15 @@ import uniqid from 'uniqid'
 import PropTypes from 'prop-types'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
-import './ProjectContainer.css'
+import './AwardContainer.css'
 
-const ProjectContainer = ({ project }) => (
+const AwardContainer = ({ project }) => (
   <div className='project'>
     <h3>{project.name}</h3>
-
+    <h6>
+      {project.awarder} / {project.date}
+    </h6>
+    <br />
     <p className='project__description'>{project.description}</p>
     {project.stack && (
       <ul className='project__stack'>
@@ -18,31 +21,11 @@ const ProjectContainer = ({ project }) => (
         ))}
       </ul>
     )}
-
-    {project.sourceCode && (
-      <a
-        href={project.sourceCode}
-        aria-label='source code'
-        className='link link--icon'
-      >
-        <GitHubIcon />
-      </a>
-    )}
-
-    {project.livePreview && (
-      <a
-        href={project.livePreview}
-        aria-label='live preview'
-        className='link link--icon'
-      >
-        <LaunchIcon />
-      </a>
-    )}
   </div>
 )
 
-ProjectContainer.propTypes = {
+AwardContainer.propTypes = {
   project: PropTypes.node.isRequired,
 }
 
-export default ProjectContainer
+export default AwardContainer
