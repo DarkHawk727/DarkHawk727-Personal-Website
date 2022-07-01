@@ -6,9 +6,9 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Arjun Sarao',
-  role: 'Highschool Student',
+  role: 'Waterloo CS 2027',
   description:
-    'I am Arjun Sarao, a Computer Science freshman at the University of Waterloo and an aspiring Machine Learning Engineer. I spend most of time coding outstanding projects or tinkering with electronics.',
+    'I am Arjun Sarao, a first year at the University of Waterloo pursuing a Bachelor of Computer Science. I am interested in Artificial Intelligence and Machine Learning.',
   resume: 'https://example.com',
   social: {
     linkedin: 'https://www.linkedin.com/in/arjun-sarao-bb555b1b4/',
@@ -38,7 +38,7 @@ const projects = [
   {
     name: 'Equalis',
     description:
-      'An App that lets citizens participate in a direct democracy. It uses a blockchain to store and verify the votes of citizens. It also allows citizens to vote on the issues that are important to them.',
+      'An app that lets citizens participate in a direct democracy. It uses a blockchain to store and verify the votes of citizens. It also allows citizens to vote on the issues that are important to them.',
     stack: [
       'Flutter',
       'Python',
@@ -60,9 +60,9 @@ const projects = [
       'https://github.com/DarkHawk727/Learn-Scientific-Programming-with-Python-Solutions',
   },
   {
-    name: 'Hotdog-not-hotdog',
+    name: 'SeeFood',
     description:
-      'Recreation of the app from Silicon Valley. The app is a hotdog detector that uses a TensorFlow CNN to detect hotdogs in images. Created an app using Java.',
+      'Recreation of the app from the TV show: Silicon Valley. The app is a hotdog detector that uses a TensorFlow CNN to detect hotdogs in images. Created an app using Java.',
     stack: ['Java', 'Python', 'TensorFlow'],
     sourceCode: 'https://github.com/DarkHawk727/Hotdog-not-Hotdog-ML',
   },
@@ -107,14 +107,14 @@ const awards = [
     description:
       'Awarded to the team with the best project according to a participant vote.',
     date: '2021',
-    awarder: 'WinHacks 2021',
+    awarder: 'WinHacks',
   },
   {
     name: 'Best Use of Google Cloud',
     description:
       'Awarded to the team with the most competent usage of a Google Cloud Product.',
     date: '2021',
-    awarder: 'UncommonHacks 2021',
+    awarder: 'UncommonHacks',
   },
   {
     name: 'Best Stone Age Hack',
@@ -128,12 +128,12 @@ const awards = [
     description:
       'Awarded to the team with the most competent usage of a Google Cloud Product.',
     date: '2021',
-    awarder: 'Hack-o-lantern 2021',
+    awarder: 'Hack-o-lantern',
   },
   {
     name: 'Certificate of Distinction',
     description:
-      'Awarded to a participant who scores in the top 25% of contestants. I was awarded for the 2021 Hypatia Math Competition.',
+      'Awarded to a participant who scores in the top 25% of contestants. I was awarded this for the 2021 Hypatia Math Competition.',
     date: '2021',
     awarder:
       'Center for Education in Mathematics and Computing | University of Waterloo',
@@ -185,6 +185,14 @@ const certifications = [
     name: 'Convolutional Neural Networks',
     description:
       "Fourth course in deeplearning.ai's Deep Learning Specialization",
+    date: '2022',
+    awarder: 'Coursera',
+    link: 'https://www.coursera.org/account/accomplishments/verify/KLHBX8T8V9JS',
+  },
+  {
+    name: 'Sequence Models',
+    description:
+      "Fifth course in deeplearning.ai's Deep Learning Specialization",
     date: '2022',
     awarder: 'Coursera',
     link: 'https://www.coursera.org/account/accomplishments/verify/KLHBX8T8V9JS',
