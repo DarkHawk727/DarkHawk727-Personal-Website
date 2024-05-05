@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="text-container">
+            <h1>Blog</h1>
+            <p>YO</p>
+            <div id="blogList" class="blog-list">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('blogs.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(blogs => {
+                    const blogListElement = document.getElementById('blogList');
+                    blogs.forEach(blog => {
+                        const blogLink = document.createElement('a');
+                        blogLink.href = blog.url;
+                        blogLink.className = 'blog-entry-link';
+                        blogLink.innerHTML = `
+                            <div class="blog-entry">
+                                <h2>${blog.title}</h2>
+                                <p>${blog.summary}</p>
+                                <div class="blog-meta">
+                                    <span>Date: ${blog.date}</span>
+                                    <span>Estimated Reading Time: ${blog.readTime}</span>
+                                </div>
+                                <div class="blog-tags">
+                                    ${blog.tags.map(tag => `<span class="tag-highlight">${tag}</span>`).join(' ')}
+                                </div>
+                            </div>
+                        `;
+                        blogListElement.appendChild(blogLink);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching blog data:', error);
+                    // Consider adding user feedback here, such as a message in the UI
+                });
+        });
+    </script>
+    <footer>
+        <p>© MMXXIV Arjun Sarao - Honestly, this took like a day with ChatGPT.</p>
+    </footer>
+</body>
+</html>

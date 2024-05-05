@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+    --background-color: #070600;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: #EEF0F2;
+    font-family: 'Fira Code', monospace;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.text-container {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+a:link {
+    color: #3A7CA5;
+}
+
+a:visited {
+    color: #985F99;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff0000;
+}
+
+table {
+    width: 100%; /* Make the table span the full width of its container */
+    border-collapse: collapse; /* Ensure there are no gaps between table cells */
+}
+
+td {
+    padding: 8px; /* Add some padding for better readability */
+    border-bottom: 1px solid #ddd; /* Add a light bottom border to each row for better separation */
+}
+
+td:first-child {
+    width: 50%; /* Adjust based on your content, ensuring enough space for course names */
+}
+
+td:last-child {
+    width: 50%; /* Adjust based on your content, ensuring enough space for skills */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add an ellipsis for overflow content */
+}
+
+.skill-highlight {
+    background-color: #f0f0f01a; /* Light grey background */
+    padding: 2px 4px; /* Add some padding around the text */
+    border-radius: 4px; /* Optional: Adds rounded corners to the highlight */
+    margin: 2px; /* Add some space around each skill, including vertically */
+    display: inline-block; /* This makes the element respect vertical margins */
+}
+
+.blog-entry {
+    background-color: rgba(255, 255, 255, 0.025); /* Light overlay on the original color */
+    color: rgba(255, 255, 255, 0.87);
+    padding: 20px; /* Space inside the container */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 700px; /* Maximum width of the entry */
+    margin: 20px auto; /* Center the entry in the page with some margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.blog-entry h2 {
+    font-size: 1.5em; /* Larger text for the title */
+    margin-bottom: 0.5em; /* Space below the title */
+}
+
+.blog-entry p {
+    font-size: 0.9em; /* Smaller text for the content */
+    line-height: 1.6; /* Space between lines of text */
+    margin-bottom: 0.5em; /* Space below the paragraph */
+}
+
+.blog-entry .blog-meta {
+    font-size: 0.8em; /* Even smaller text for meta information */
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid #444; /* Line to separate the meta from content */
+    padding-top: 10px; /* Space above the meta line */
+    margin-top: 10px; /* Space below the content */
+}
+
+.blog-entry .blog-meta span {
+    margin-right: 15px; /* Space between meta information */
+}
+
+.blog-tags {
+    margin-top: 10px; /* Space above the tags */
+}
+
+.tag-highlight {
+    display: inline-block;
+    background-color: #f0f0f01a; /* Light grey background */
+    padding: 2px 4px; /* Add some padding around the text */
+    border-radius: 4px; /* Optional: Adds rounded corners to the highlight */
+    margin: 2px; /* Add some space around each tag */
+    font-size: 0.8em; /* Smaller font size for tags */
+    white-space: nowrap; /* Prevent tags from wrapping */
+}
+
+.blog-entry-link, .blog-entry-link:hover, .blog-entry-link:focus, .blog-entry-link:active {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* The link will use the text color from its parent */
+    display: block; /* Makes the link block-level, allowing it to contain the div */
+    outline: none; /* Removes the outline that might appear when the link is active/focused */
+}
